@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+button {
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: black;
+  background-color: rgba(86, 67, 194, 0.876);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 60%;
+  border: none;
+}
+
+body {
+  background-color: rgb(70, 66, 66);
+  background-image: url("assets/imagenes/2690.jpg");
+}
+
+.label input {
+  width: 70%;
+  border-radius: 11px;
+  margin-bottom: 30px;
+  padding: 13px 20px;
+  font-size: beige;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.label h3 {
+  display: flex;
+  margin: 5px 50px;
+  font-family: Arial;
+  justify-content: flex-start;
+}

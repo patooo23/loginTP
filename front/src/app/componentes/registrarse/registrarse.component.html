@@ -1,0 +1,90 @@
+<div class="formulario">
+  <!------------------------------------------------>
+  <h1>Registrarse</h1>
+  <!------------------------------------------------>
+  <form #registrarseForm="ngForm" (submit)="crearUsuario($event)">
+    <div class="general">
+      <div class="hh3">
+        <h3>nombre</h3>
+        <br />
+        <h3>apellido</h3>
+        <br />
+        <h3>correo</h3>
+        <br />
+        <div class="hhh3">
+          <h3>nombre de usuario</h3>
+          <br />
+          <h3>contraseña</h3>
+          <br />
+          <h3>repetir contraseña</h3>
+        </div>
+      </div>
+      <div class="inputs">
+        <input
+          id="nombre"
+          name="nombre"
+          required
+          [(ngModel)]="usuario.nombre"
+          #nombre="ngModel"
+        />
+        <input
+          id="apellido"
+          name="apellido"
+          required
+          [(ngModel)]="usuario.apellido"
+          #apellido="ngModel"
+        />
+        <input
+          id="correo"
+          name="correo"
+          type="email"
+          required
+          [(ngModel)]="usuario.correo"
+          #correo="ngModel"
+        />
+        <input
+          id="nombre-u"
+          name="nombre-u"
+          type="text"
+          required
+          [(ngModel)]="usuario.nombreU"
+          #nombreU="ngModel"
+        />
+
+        <input
+          id="contrasenia"
+          name="contrasenia"
+          type="password"
+          required
+          [(ngModel)]="usuario.contrasenia"
+          #contrasenia="ngModel"
+        />
+        <input
+          id="repetir-contrasenia"
+          name="repetir-contrasenia"
+          type="password"
+          required
+          [(ngModel)]="usuario.repetirContrasenia"
+          #repetirContrasenia="ngModel"
+        />
+      </div>
+    </div>
+    <!------------------------------------------------>
+
+    <!------------------------------------------------>
+    <div class="general2">
+      <label class="checkbox-label" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <span>Acepto las condiciones</span>
+      </label>
+      <br />
+
+      <div class="botones">
+        <button class="registrarse" type="submit">Crear Cuenta</button>
+        <button class="Borrar" type="button" (click)="registrarseForm.reset()">
+          Borrar Campos
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

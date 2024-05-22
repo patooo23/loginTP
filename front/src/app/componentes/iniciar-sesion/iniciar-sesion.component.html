@@ -1,0 +1,58 @@
+<div class="formulario">
+  <h1>Inicio de sesion</h1>
+  <form #iniciarSesionForm="ngForm" (submit)="iniciarSesion($event)">
+    <div class="label">
+      <h3>Correo Electronico</h3>
+      <input
+        id="correo"
+        name="correo"
+        type="text"
+        placeholder="ingrese su correo Electronico"
+        required
+        [(ngModel)]="usuario.correo"
+        #correo="ngModel"
+      />
+    </div>
+    <!------------------------------------------------------------------>
+    <div class="label">
+      <h3>contraseña</h3>
+      <input
+        id="contrasenia"
+        name="contrasenia"
+        type="password"
+        placeholder="ingrese su contraseña"
+        required
+        [(ngModel)]="usuario.contrasenia"
+        #contrasenia="ngModel"
+      />
+
+      <!----------------------------------------------------->
+      <div class="botones">
+        <button class="iniciar-sesion" type="submit">Iniciar sesion</button>
+        <button
+          class="Borrar"
+          type="button"
+          (click)="iniciarSesionForm.reset()"
+        >
+          Borrar Campos
+        </button>
+      </div>
+      <br />
+      <!--------------------------------------------------------->
+    </div>
+    <label class="checkbox-label" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      recordarme
+    </label>
+    <div>
+      <br />
+      <!----------------------------------------------------->
+      <a href="#">¿Olvidaste la contraseña?</a>
+    </div>
+    <br />
+    <div>
+      <a routerLink="/registrarse">Registrarme</a>
+    </div>
+    <!--------------------------------------------------------------->
+  </form>
+</div>

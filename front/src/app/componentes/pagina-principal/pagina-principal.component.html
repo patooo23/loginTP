@@ -1,0 +1,11 @@
+<div *ngIf="appComponent.estaLogueado()">
+  <div class="contenedor">
+    <button class="iniciar-sesion" type="button" routerLink="/inicio">
+      cerrar sesion
+    </button>
+  </div>
+  <div class="bienvendida">
+    <h1>BIENVENIDO {{ appComponent.usuarioLogueado().nombre }}!</h1>
+    <img src="assets/imagenes/boca.jpg" alt="boca" />
+  </div>
+</div>
